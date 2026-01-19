@@ -21,11 +21,12 @@
 
 html.dark {
   /* Dark theme (default) */
-  --bg: 222 47% 7%;
+  /* Subimos “tonos” para legibilidad: menos negro puro, más contraste utilizable. */
+  --bg: 222 40% 10%;
   --fg: 210 40% 98%;
-  --muted: 215 20% 70%;
-  --card: 222 47% 10%;
-  --border: 217 19% 22%;
+  --muted: 215 22% 78%;
+  --card: 222 35% 14%;
+  --border: 217 22% 28%;
 
   --accent: 198 93% 60%;
   --accent2: 269 90% 72%;

@@ -131,6 +131,10 @@ export const site = {
       ],
       stack: ["PHP", "MySQL", "MVC", "HTML", "CSS", "JS"],
       links: [{ label: "Live", href: "https://peppy-bublanina-02817d.netlify.app/" }],
+      images: [
+        { src: "/src/img/10.png", alt: "Real State — screenshot 1", caption: "Vista / módulo." },
+        { src: "/src/img/9.png", alt: "Real State — screenshot 2", caption: "Detalle / flujo." },
+      ],
     },
     {
       id: "conferences",
@@ -146,7 +150,31 @@ export const site = {
         { src: "/src/img/prueba2.png", alt: "Conferences — screenshot", caption: "Vista / galería." },
         { src: "/src/img/3.png", alt: "Conferences — screenshot 2", caption: "UI de módulo." },
         { src: "/src/img/4.png", alt: "Conferences — screenshot 3", caption: "Detalle." },
+        { src: "/src/img/5.png", alt: "Conferences — screenshot 4", caption: "Pantalla / módulo." },
+        { src: "/src/img/6.png", alt: "Conferences — screenshot 5", caption: "Vista / navegación." },
+        { src: "/src/img/7.png", alt: "Conferences — screenshot 6", caption: "Detalle / UI." },
       ],
+    },
+    {
+      id: "uptask",
+      title: "UpTask",
+      subtitle: "App de tareas con autenticación y flujo CRUD (proyecto web).",
+      bullets: [
+        "Flujo de autenticación y manejo de sesiones.",
+        "CRUD de tareas/proyectos con UI clara y simple.",
+      ],
+      stack: ["PHP", "MySQL", "MVC", "JS", "HTML/CSS"],
+      links: [{ label: "In progress" }],
+      images: [{ src: "/src/img/8.png", alt: "UpTask — screenshot", caption: "Vista principal." }],
+    },
+    {
+      id: "shows",
+      title: "Shows Page",
+      subtitle: "Página en JavaScript (demo) para practicar consumo de datos y UI.",
+      bullets: ["Proyecto frontend en JS.", "Foco en UI y flujo de datos del lado del cliente."],
+      stack: ["JavaScript", "HTML/CSS"],
+      links: [{ label: "Live", href: "https://coruscating-caramel-2b854e.netlify.app/" }],
+      images: [{ src: "/src/img/11.png", alt: "Shows Page — screenshot", caption: "Vista principal (demo)." }],
     },
   ] satisfies Project[],
   skills: {
