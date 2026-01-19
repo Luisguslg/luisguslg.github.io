@@ -1,0 +1,11 @@
+---
+type Props = { class?: string };
+const { class: className } = Astro.props;
+---
+
+<div
+  class={`rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 ${className ?? ""}`}
+>
+  <slot />
+</div>
+

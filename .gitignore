@@ -1,4 +1,12 @@
 node_modules
-src
-gulpfile.js
-package*
+.astro
+.cache
+.DS_Store
+Thumbs.db
+
+# Build output (committed for GitHub Pages)
+# docs/
+
+# Local env (optional)
+.env
+.env.*

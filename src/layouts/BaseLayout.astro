@@ -1,0 +1,78 @@
+---
+import "../styles/globals.css";
+import { site } from "../content/site";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+const { title = site.meta.title, description = site.meta.description } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, site.meta.canonical).toString();
+const ogImage = new URL("og.svg", site.meta.canonical).toString();
+
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.person.name,
+  jobTitle: site.person.role,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Caracas",
+    addressCountry: "VE",
+  },
+  url: site.person.links.portfolio,
+  sameAs: [site.person.links.linkedin],
+};
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#0b1220" />
+
+    <title>{title}</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script is:inline>
+      // Theme: default dark; persist choice.
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const prefersLight =
+            window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+          const theme = stored ?? (prefersLight ? "light" : "dark");
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch {}
+      })();
+    </script>
+
+    <script type="application/ld+json" is:inline>
+      {JSON.stringify(personLd)}
+    </script>
+  </head>
+  <body>
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:rounded-lg focus:border focus:border-border focus:bg-bg focus:px-3 focus:py-2 focus:text-sm"
+    >
+      Saltar al contenido
+    </a>
+    <slot />
+  </body>
+</html>
+

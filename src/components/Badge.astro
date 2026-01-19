@@ -1,0 +1,15 @@
+---
+type Props = { children: string; variant?: "default" | "muted"; class?: string };
+const { children, variant = "default", class: className } = Astro.props;
+const styles =
+  variant === "muted"
+    ? "border-border/70 bg-card/40 text-muted"
+    : "border-border bg-card text-fg";
+---
+
+<span
+  class={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none ${styles} ${className ?? ""}`}
+>
+  <slot />
+</span>
+

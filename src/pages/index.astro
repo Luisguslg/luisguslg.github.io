@@ -1,0 +1,163 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/Container.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import CTAButton from "../components/CTAButton.astro";
+import Nav from "../components/Nav.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { site } from "../content/site";
+
+const { hero, highlights, projects, skills, about, certifications, certificationsLink, contact, cta } = site;
+---
+
+<BaseLayout>
+  <Nav />
+
+  <main id="content">
+    <Container>
+      <section class="relative py-16 sm:py-20">
+        <div class="absolute inset-0 -z-10">
+          <div class="pointer-events-none absolute -top-24 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/20 blur-[90px]"></div>
+          <div class="pointer-events-none absolute -top-10 left-[15%] h-[340px] w-[340px] rounded-full bg-[hsl(var(--accent2)/0.18)] blur-[90px]"></div>
+        </div>
+
+        <p class="font-mono text-xs uppercase tracking-wider text-muted">Portfolio · 2026</p>
+        <h1 class="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-5xl">
+          {hero.headline}
+        </h1>
+        <p class="mt-3 max-w-2xl text-balance text-base text-muted sm:text-lg">{hero.title}</p>
+        <p class="mt-4 max-w-2xl text-balance text-muted">{hero.tagline}</p>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          {hero.chips.map((c) => (
+            <Badge variant="muted">{c}</Badge>
+          ))}
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <CTAButton variant="primary" href={cta.primary.href}>{cta.primary.label}</CTAButton>
+          <CTAButton variant="secondary" href={cta.secondary.href}>{cta.secondary.label}</CTAButton>
+          <CTAButton variant="ghost" href={cta.tertiary.href} external>{cta.tertiary.label}</CTAButton>
+        </div>
+      </section>
+
+      <Section id="proof" eyebrow="Proof" title="Señales rápidas" description="Tres cosas que quieres saber en 20 segundos.">
+        <div class="grid gap-4 md:grid-cols-3">
+          {highlights.map((h) => (
+            <Card class="p-5">
+              <h3 class="text-base font-semibold tracking-tight">{h.title}</h3>
+              <p class="mt-2 text-sm text-muted">{h.body}</p>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        id="projects"
+        eyebrow="Featured"
+        title="Proyectos"
+        description="Pocos, claros y con foco en ownership, impacto y calidad."
+      >
+        <div class="grid gap-4 lg:grid-cols-2">
+          {projects.map((p) => (
+            <ProjectCard project={p} />
+          ))}
+        </div>
+      </Section>
+
+      <Section id="skills" eyebrow="Skills" title="Lo que uso hoy" description="Honesto, data-first y sin inflar.">
+        <div class="grid gap-4 md:grid-cols-2">
+          <Card class="p-5">
+            <h3 class="text-base font-semibold tracking-tight">Data</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {skills.data.map((s) => (
+                <Badge variant="muted">{s}</Badge>
+              ))}
+            </div>
+          </Card>
+          <Card class="p-5">
+            <h3 class="text-base font-semibold tracking-tight">Engineering</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {skills.engineering.map((s) => (
+                <Badge variant="muted">{s}</Badge>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </Section>
+
+      <Section id="about" eyebrow="Sobre mí" title="Resumen">
+        <Card class="p-6">
+          <div class="grid gap-3">
+            {about.map((line) => (
+              <p class="text-muted">{line}</p>
+            ))}
+          </div>
+        </Card>
+      </Section>
+
+      <Section id="certs" eyebrow="Certificaciones" title="Certificaciones (curado)">
+        <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-sm text-muted">Lista corta. Evidencia completa en carpeta.</p>
+          <CTAButton variant="secondary" href={certificationsLink.href} external>
+            {certificationsLink.label}
+          </CTAButton>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          {certifications.map((c) => (
+            <Card class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <p class="font-medium">{c.title}</p>
+                <Badge variant="muted">{c.status}</Badge>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      <Section id="contact" eyebrow="CTA" title={contact.headline} description={contact.body}>
+        <Card class="p-6">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p class="font-semibold">{site.person.location}</p>
+              <p class="mt-1 text-sm text-muted">Respondo más rápido por LinkedIn.</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <CTAButton
+                variant="secondary"
+                href={site.person.email ? `mailto:${site.person.email}` : "#"}
+                disabled={!site.person.email}
+              >
+                Email
+              </CTAButton>
+              <CTAButton variant="primary" href={contact.linkedinCta.href} external>
+                {contact.linkedinCta.label}
+              </CTAButton>
+            </div>
+          </div>
+          {!site.person.email && (
+            <p class="mt-4 text-xs text-muted">
+              Nota: agrega tu email en <span class="font-mono">src/content/site.ts</span>.
+            </p>
+          )}
+        </Card>
+      </Section>
+
+      <footer class="border-t border-border py-10">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-muted">
+            {new Date().getFullYear()} · {site.person.name} · {site.person.location}
+          </p>
+          <div class="flex flex-wrap gap-4 text-sm">
+            {site.nav.map((item) => (
+              <a class="text-muted hover:text-fg transition-colors" href={item.href}>{item.label}</a>
+            ))}
+          </div>
+        </div>
+      </footer>
+    </Container>
+  </main>
+</BaseLayout>
+

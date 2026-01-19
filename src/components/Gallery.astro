@@ -1,0 +1,121 @@
+---
+import Card from "./Card.astro";
+import type { ProjectImage } from "../content/site";
+import { Image } from "astro:assets";
+
+type Props = {
+  images: ProjectImage[];
+  projectTitle: string;
+};
+
+const { images, projectTitle } = Astro.props;
+
+// Eager-load local images under src/img so Astro can optimize them.
+// This lets content use "/src/img/<filename>" while keeping all copy centralized.
+const localImgs = import.meta.glob("../img/*.{png,jpg,jpeg,webp}", { eager: true });
+function resolveLocal(src: string) {
+  if (!src.startsWith("/src/img/")) return null;
+  const file = src.replace("/src/img/", "");
+  const key = `../img/${file}`;
+  // @ts-expect-error - Astro asset modules
+  return localImgs[key]?.default ?? null;
+}
+---
+
+<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {images.slice(0, 6).map((img, idx) => (
+    <button
+      type="button"
+      class="group text-left"
+      aria-label={`Abrir imagen ${idx + 1} de ${projectTitle}`}
+      data-open={`gallery-${projectTitle}-${idx}`}
+    >
+      <Card class="overflow-hidden">
+        <div class="relative aspect-[16/10] overflow-hidden">
+          {resolveLocal(img.src) ? (
+            <Image
+              src={resolveLocal(img.src)}
+              alt={img.alt}
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              widths={[400, 800, 1200]}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              loading="lazy"
+            />
+          ) : (
+            <img
+              src={img.src}
+              alt={img.alt}
+              loading="lazy"
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+          )}
+        </div>
+        <div class="p-3">
+          <p class="line-clamp-2 text-sm text-muted">{img.caption}</p>
+        </div>
+      </Card>
+    </button>
+  ))}
+</div>
+
+<div>
+  {images.slice(0, 6).map((img, idx) => (
+    <dialog
+      id={`gallery-${projectTitle}-${idx}`}
+      class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"
+    >
+      <div class="flex items-center justify-between border-b border-border px-4 py-3">
+        <div class="min-w-0">
+          <p class="truncate text-sm font-medium">{projectTitle}</p>
+          <p class="truncate text-xs text-muted">{img.caption}</p>
+        </div>
+        <button
+          type="button"
+          class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80"
+          data-close
+        >
+          Cerrar
+        </button>
+      </div>
+      <div class="p-3 sm:p-4">
+        <div class="overflow-hidden rounded-lg border border-border bg-card">
+          {resolveLocal(img.src) ? (
+            <Image
+              src={resolveLocal(img.src)}
+              alt={img.alt}
+              class="h-auto w-full"
+              widths={[800, 1200, 1600]}
+              sizes="(max-width: 1100px) 100vw, 1100px"
+              loading="lazy"
+            />
+          ) : (
+            <img src={img.src} alt={img.alt} class="h-auto w-full" loading="lazy" />
+          )}
+        </div>
+      </div>
+    </dialog>
+  ))}
+</div>
+
+<script>
+  const openers = document.querySelectorAll("[data-open]");
+  for (const btn of openers) {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-open");
+      if (!id) return;
+      const dlg = document.getElementById(id);
+      if (dlg && "showModal" in dlg) dlg.showModal();
+    });
+  }
+  document.addEventListener("click", (e) => {
+    const t = e.target;
+    if (!(t instanceof HTMLElement)) return;
+    if (t.matches("[data-close]")) {
+      const dlg = t.closest("dialog");
+      dlg?.close();
+    }
+    // Click outside closes
+    if (t instanceof HTMLDialogElement) t.close();
+  });
+</script>
+

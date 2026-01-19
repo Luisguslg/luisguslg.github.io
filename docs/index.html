@@ -1,212 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="build/css/app.css" />
-    <title>LGPM</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__contenedor">
-        <div class="header__logo">
-          <i class="fa-solid fa-code"></i>LGPM
-        </div>
-        <nav class="header__nav">
-          <a href="#about">About me</a>
-          <a href="#certificaciones">Certifications</a>
-          <a href="#webpages">Webpages</a>
-          <a href="#contacto">Contact Me</a>
-        </nav>
-      </div>
-    </header>
-    <section>
-      <h1>Welcome to my WebSite</h1>
-    </section>
-    <main class="about" id="about">
-      <h2>Luis Gustavo Perdomo Márquez</h2>
-      <div class="about__contenedor">
-        <div class="about__texto">
-          <p>
-            Luis Gustavo Perdomo Márquez; web developer,
-            computer engineering student, full stack programmer.
-          </p>
-          <p>I Can Handle: HTML, JS, CSS, SASS, GULP, PHP, MYSQL, GIT, GITHUB, POO, MVC.</p>
-          <p>Languages: Spanish & English</p>
-          <p>Soft Skills: Leader, Creative, Attitude, Acuity</p>
-          <p>Caracas, Venezuela</p>
-        </div>
-        <div class="about__imagen">
-          <picture>
-            <source
-              srcset="
-                build\img\stock-photo-cropped-view-programmer-using-computer.webp
-              "
-              type="image/webp"
-            />
-            <source
-              srcset="
-                build\img\stock-photo-cropped-view-programmer-using-computer.jpg
-              "
-              type="image/jpg"
-            />
-            <img
-              class="evento__imagen-autor"
-              src="build/img/stock-photo-cropped-view-programmer-using-computer.jpg"
-              loading="lazy"
-              width="200"
-              height="300"
-              alt="Imagen desarrollador"
-            />
-          </picture>
-        </div>
-      </div>
-    </main>
-    <section class="certificaciones" id="certificaciones">
-      <h2>Know Some of my Certifications</h2>
-      <div class="certificaciones__contenedor">
-        <div class="certificaciones__imagen">
-          <picture>
-            <source
-              srcset="
-              build/img/Screenshot 2023-02-02 212537.webp
-              "
-              type="image/webp"
-            />
-            <source
-              srcset="
-              build/img/Screenshot 2023-02-02 212537.png
-              "
-              type="image/jpg"
-            />
-            <img
-              class="evento__imagen-autor"
-              src="build/img/Screenshot 2023-02-02 212537.png"
-              loading="lazy"
-              width="200"
-              height="300"
-              alt="Imagen desarrollador"
-            />
-          </picture>
-        </div>
-        <div class="certificaciones__texto">
-          <p>
-            Bootcamp Desarrollo Web Completo (HTML, CSS, JS, GULP, SASS,
-            WEBP, MYSQL, PHP, ACTIVE RECORD, MVC, POO)
-          </p>
-        </div>
-        <div class="certificaciones__imagen">
-          <picture>
-            <source
-              srcset="
-              build/img/Screenshot 2023-02-02 212631.webp
-              "
-              type="image/webp"
-            />
-            <source
-              srcset="
-              build/img/Screenshot 2023-02-02 212631.png
-              "
-              type="image/jpg"
-            />
-            <img
-              class="evento__imagen-autor"
-              src="build/img/Screenshot 2023-02-02 212631.png"
-              loading="lazy"
-              width="200"
-              height="300"
-              alt="Imagen desarrollador"
-            />
-          </picture>
-        </div>
-        <div class="certificaciones__texto">
-          <p>
-            Complete Git & Github Certification
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="webpages" id="webpages">
-      <h2>Know some of my Pages</h2>
-      <div class="webpages__contenedor">
-        <div class="webpages__images">
-          <img src="build/img/prueba2.png" alt="prueba" />
-          <img src="build/img/3.png" alt="prueba" />
-          <img src="build/img/4.png" alt="prueba" />
-          <img src="build/img/5.png" alt="prueba" />
-          <img src="build/img/6.png" alt="prueba" />
-          <img src="build/img/7.png" alt="prueba" />
-          <img src="build/img/prueba1.png" alt="prueba" />
-        </div>
-        <div class="webpages__texto">
-          <h4>Conferences Webpage</h4>
-          <p>
-            Dinamic complete CRUD, autentification, paypal,
-            administrators panel; created with MVC paradigma using PHP, MYSQL, JS, HTML, CSS, SASS and WEBP.
-          </p>
-        </div>
-        <div class="webpages_image">
-          <img src="build/img/8.png" alt="prueba" />
-        </div>
-        <div class="webpages__texto">
-          <h4>UpTask</h4>
-          <p>
-            Dinamic complete CRUD, autentification; created with MVC using
-            PHP, MYSQL, JS, HTML, CSS and SASS.
-          </p>
-        </div>
-        <div class="webpages__images-2">
-          <img src="build/img/10.png" alt="prueba" />
-          <img src="build/img/9.png" alt="prueba" />
-        </div>
-        <div class="webpages__texto">
-          <h4>Real State Page</h4>
-          <p>
-            Dinamic complete CRUD, autentification; created with MVC using
-            PHP, MYSQL, JS, HTML, CSS and SASS.
-          </p>
-          <a class="button" href="https://peppy-bublanina-02817d.netlify.app/">Watch</a>
-        </div>
-        <div class="webpages_image">
-          <img src="build/img/11.png" alt="prueba" />
-        </div>
-        <div class="webpages__texto">
-          <h4>Shows Page</h4>
-          <p>Full JS page</p>
-          <a class="button" href="https://coruscating-caramel-2b854e.netlify.app/">Watch</a>
-        </div>
-      </div>
-    </section>
-    <section id="contacto" class="contacto">
-      <h2>How to find me?</h2>
-      <div class="contacto__contenedor">
-        <div class="contacto__telefono">
-          <a href="https://api.whatsapp.com/send?phone=584241833737">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <nav class="footer__menu-social"></nav>
-      <div class="footer__copy">
-        <p>All rights reserved Luis Perdomo - 2023 &copy;</p>
-      </div>
-    </footer>
-    <script src="build/js/app.js"></script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="es" class="dark"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Aspirante a Científico de Datos (Ing. Informática UCAB). Construyo productos orientados a datos, dashboards y sistemas robustos."><link rel="canonical" href="https://luisguslg.github.io/"><meta name="theme-color" content="#0b1220"><title>Luis Gustavo Perdomo Márquez — Data-focused builder</title><meta property="og:type" content="website"><meta property="og:title" content="Luis Gustavo Perdomo Márquez — Data-focused builder"><meta property="og:description" content="Aspirante a Científico de Datos (Ing. Informática UCAB). Construyo productos orientados a datos, dashboards y sistemas robustos."><meta property="og:url" content="https://luisguslg.github.io/"><meta property="og:image" content="https://luisguslg.github.io/og.svg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Luis Gustavo Perdomo Márquez — Data-focused builder"><meta name="twitter:description" content="Aspirante a Científico de Datos (Ing. Informática UCAB). Construyo productos orientados a datos, dashboards y sistemas robustos."><meta name="twitter:image" content="https://luisguslg.github.io/og.svg"><script>
+      // Theme: default dark; persist choice.
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const prefersLight =
+            window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+          const theme = stored ?? (prefersLight ? "light" : "dark");
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch {}
+      })();
+    </script><script type="application/ld+json">
+      {JSON.stringify(personLd)}
+    </script><link rel="stylesheet" href="/_astro/index.DNRNlvZh.css"></head> <body> <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:rounded-lg focus:border focus:border-border focus:bg-bg focus:px-3 focus:py-2 focus:text-sm">
+Saltar al contenido
+</a>  <header class="sticky top-0 z-50 border-b border-border bg-bg/75 backdrop-blur supports-[backdrop-filter]:bg-bg/55"> <div class="mx-auto w-full max-w-6xl px-5 sm:px-6 py-3">  <div class="flex items-center justify-between gap-3"> <a href="#" class="flex items-center gap-2 font-semibold tracking-tight"> <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-card font-mono text-xs">
+LG
+</span> <span class="hidden sm:inline">Luis Gustavo Perdomo Márquez</span> </a> <nav class="hidden items-center gap-6 md:flex" aria-label="Secciones"> <a class="text-sm text-muted hover:text-fg transition-colors" href="#projects"> Proyectos </a><a class="text-sm text-muted hover:text-fg transition-colors" href="#skills"> Skills </a><a class="text-sm text-muted hover:text-fg transition-colors" href="#about"> Sobre mí </a><a class="text-sm text-muted hover:text-fg transition-colors" href="#certs"> Certificaciones </a><a class="text-sm text-muted hover:text-fg transition-colors" href="#contact"> Contacto </a> </nav> <div class="flex items-center gap-2"> <details class="relative md:hidden"> <summary class="list-none rounded-lg border border-border bg-card px-3 py-2 text-sm hover:bg-card/80 cursor-pointer">
+Menú
+</summary> <div class="absolute right-0 mt-2 w-56 rounded-xl border border-border bg-bg shadow-soft"> <div class="p-2"> <a class="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-card/60 hover:text-fg" href="#projects"> Proyectos </a><a class="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-card/60 hover:text-fg" href="#skills"> Skills </a><a class="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-card/60 hover:text-fg" href="#about"> Sobre mí </a><a class="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-card/60 hover:text-fg" href="#certs"> Certificaciones </a><a class="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-card/60 hover:text-fg" href="#contact"> Contacto </a> </div> </div> </details> <button type="button" class="rounded-lg border border-border bg-card px-3 py-2 text-sm hover:bg-card/80" aria-label="Cambiar tema" data-theme-toggle> <span class="font-mono text-xs">Tema</span> </button> <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg border border-border bg-card hover:bg-card/80  hidden sm:inline-flex"> Let’s talk </a> <a aria-disabled="true" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg bg-accent text-[hsl(var(--bg))] hover:bg-accent/90 pointer-events-none opacity-60 "> Descargar CV </a> </div> </div>  </div> </header> <script type="module">const e=document.querySelector("[data-theme-toggle]");e?.addEventListener("click",()=>{const t=document.documentElement.classList.toggle("dark");try{localStorage.setItem("theme",t?"dark":"light")}catch{}});</script> <main id="content"> <div class="mx-auto w-full max-w-6xl px-5 sm:px-6 ">  <section class="relative py-16 sm:py-20"> <div class="absolute inset-0 -z-10"> <div class="pointer-events-none absolute -top-24 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/20 blur-[90px]"></div> <div class="pointer-events-none absolute -top-10 left-[15%] h-[340px] w-[340px] rounded-full bg-[hsl(var(--accent2)/0.18)] blur-[90px]"></div> </div> <p class="font-mono text-xs uppercase tracking-wider text-muted">Portfolio · 2026</p> <h1 class="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-5xl"> Luis Gustavo Perdomo Márquez </h1> <p class="mt-3 max-w-2xl text-balance text-base text-muted sm:text-lg">Aspirante a Científico de Datos | Ingeniería Informática (UCAB)</p> <p class="mt-4 max-w-2xl text-balance text-muted">Construyo productos orientados a datos, dashboards y sistemas robustos. Enfocado en calidad de ingeniería y claridad.</p> <div class="mt-6 flex flex-wrap gap-2"> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Caracas </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> UCAB (último año) </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> KPMG Internship </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Data focus </span> </div> <div class="mt-8 flex flex-wrap gap-3"> <a href="#projects" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg bg-accent text-[hsl(var(--bg))] hover:bg-accent/90  "> Ver proyectos </a> <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg border border-border bg-card hover:bg-card/80  "> Contactar </a> <a href="https://www.linkedin.com/in/luisguslg/" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg hover:bg-card/60  " rel="noreferrer noopener" target="_blank"> LinkedIn </a> </div> </section> <section id="proof" class="py-16 sm:py-20 ">  <header class="mb-10"> <p class="font-mono text-xs uppercase tracking-wider text-muted">Proof</p> <h2 class="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl"> Señales rápidas </h2> <p class="mt-3 max-w-2xl text-muted">Tres cosas que quieres saber en 20 segundos.</p> </header>   <div class="grid gap-4 md:grid-cols-3"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <h3 class="text-base font-semibold tracking-tight">Ownership end-to-end</h3> <p class="mt-2 text-sm text-muted">Refactor completo de “Sumando Valor”: arquitectura, UI y calidad del producto de punta a punta.</p>  </div><div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <h3 class="text-base font-semibold tracking-tight">Dashboards (Power BI)</h3> <p class="mt-2 text-sm text-muted">Diseño y construcción de dashboards para reporting interno, con foco en claridad y decisiones.</p>  </div><div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <h3 class="text-base font-semibold tracking-tight">Base fuerte (UCAB)</h3> <p class="mt-2 text-sm text-muted">Top 10. Probabilidad &amp; Estadística, Bases de Datos, Algoritmos, Métodos Numéricos.</p>  </div> </div>  </section> <section id="projects" class="py-16 sm:py-20 ">  <header class="mb-10"> <p class="font-mono text-xs uppercase tracking-wider text-muted">Featured</p> <h2 class="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl"> Proyectos </h2> <p class="mt-3 max-w-2xl text-muted">Pocos, claros y con foco en ownership, impacto y calidad.</p> </header>   <div class="grid gap-4 lg:grid-cols-2"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5 sm:p-6 lg:col-span-2">  <div class="flex flex-wrap items-start justify-between gap-4"> <div class="min-w-0"> <h3 class="text-lg font-semibold tracking-tight sm:text-xl">Sumando Valor</h3> <p class="mt-1 text-sm text-muted">KPMG (Internship) — Oct 2025 – Presente</p> <p class="mt-3 text-balance text-sm text-muted">Aplicación interna (NDA) refactorizada end-to-end para mejorar mantenibilidad y experiencia.</p> </div> <div class="flex flex-wrap items-center gap-2"> <a aria-disabled="true" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg border border-border bg-card hover:bg-card/80 pointer-events-none opacity-60 "> Private / NDA </a> </div> </div> <ul class="mt-5 grid gap-2 text-sm"> <li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Tomé ownership del refactor completo: estructura, componentes, limpieza técnica y consistencia UI.</span> </li><li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Mejoré legibilidad y escalabilidad del código con patrones y modularidad.</span> </li><li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Aseguré una experiencia más sólida: estados vacíos, validaciones y detalles de UX.</span> </li> </ul> <div class="mt-5 flex flex-wrap gap-2"> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Web </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> JavaScript/TypeScript </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> CSS </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Buenas prácticas </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> UX </span> </div> <div class="mt-6"> <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"> <button type="button" class="group text-left" aria-label="Abrir imagen 1 de Sumando Valor" data-open="gallery-Sumando Valor-0"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 overflow-hidden">  <div class="relative aspect-[16/10] overflow-hidden"> <img src="/_astro/unnamed.OoqY9LGv_1WfPny.webp" srcset="/_astro/unnamed.OoqY9LGv_ZprCK4.webp 400w, /_astro/unnamed.OoqY9LGv_15xUzS.webp 800w, /_astro/unnamed.OoqY9LGv_Z1wfAys.webp 1200w" alt="Sumando Valor — screenshot 1" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" decoding="async" fetchpriority="auto" width="1916" height="882" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"> </div> <div class="p-3"> <p class="line-clamp-2 text-sm text-muted">Vista principal (producto interno).</p> </div>  </div> </button><button type="button" class="group text-left" aria-label="Abrir imagen 2 de Sumando Valor" data-open="gallery-Sumando Valor-1"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 overflow-hidden">  <div class="relative aspect-[16/10] overflow-hidden"> <img src="/_astro/unnamed%20(1).Cjm5Zq1C_13h3cm.webp" srcset="/_astro/unnamed%20(1).Cjm5Zq1C_1SjDaS.webp 400w, /_astro/unnamed%20(1).Cjm5Zq1C_ZWuj2K.webp 800w, /_astro/unnamed%20(1).Cjm5Zq1C_b7UfM.webp 1200w" alt="Sumando Valor — screenshot 2" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" decoding="async" fetchpriority="auto" width="1919" height="898" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"> </div> <div class="p-3"> <p class="line-clamp-2 text-sm text-muted">Flujo / módulo destacado.</p> </div>  </div> </button><button type="button" class="group text-left" aria-label="Abrir imagen 3 de Sumando Valor" data-open="gallery-Sumando Valor-2"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 overflow-hidden">  <div class="relative aspect-[16/10] overflow-hidden"> <img src="/_astro/unnamed%20(2).IFbmo40w_2u4Lac.webp" srcset="/_astro/unnamed%20(2).IFbmo40w_Z2fC1Nt.webp 400w, /_astro/unnamed%20(2).IFbmo40w_23OhRU.webp 800w, /_astro/unnamed%20(2).IFbmo40w_18bM1Y.webp 1200w" alt="Sumando Valor — screenshot 3" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" decoding="async" fetchpriority="auto" width="1919" height="889" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"> </div> <div class="p-3"> <p class="line-clamp-2 text-sm text-muted">Detalle de UI y datos.</p> </div>  </div> </button> </div> <div> <dialog id="gallery-Sumando Valor-0" class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"> <div class="flex items-center justify-between border-b border-border px-4 py-3"> <div class="min-w-0"> <p class="truncate text-sm font-medium">Sumando Valor</p> <p class="truncate text-xs text-muted">Vista principal (producto interno).</p> </div> <button type="button" class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80" data-close>
+Cerrar
+</button> </div> <div class="p-3 sm:p-4"> <div class="overflow-hidden rounded-lg border border-border bg-card"> <img src="/_astro/unnamed.OoqY9LGv_1WfPny.webp" srcset="/_astro/unnamed.OoqY9LGv_15xUzS.webp 800w, /_astro/unnamed.OoqY9LGv_Z1wfAys.webp 1200w, /_astro/unnamed.OoqY9LGv_1ccEcM.webp 1600w" alt="Sumando Valor — screenshot 1" sizes="(max-width: 1100px) 100vw, 1100px" loading="lazy" decoding="async" fetchpriority="auto" width="1916" height="882" class="h-auto w-full"> </div> </div> </dialog><dialog id="gallery-Sumando Valor-1" class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"> <div class="flex items-center justify-between border-b border-border px-4 py-3"> <div class="min-w-0"> <p class="truncate text-sm font-medium">Sumando Valor</p> <p class="truncate text-xs text-muted">Flujo / módulo destacado.</p> </div> <button type="button" class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80" data-close>
+Cerrar
+</button> </div> <div class="p-3 sm:p-4"> <div class="overflow-hidden rounded-lg border border-border bg-card"> <img src="/_astro/unnamed%20(1).Cjm5Zq1C_13h3cm.webp" srcset="/_astro/unnamed%20(1).Cjm5Zq1C_ZWuj2K.webp 800w, /_astro/unnamed%20(1).Cjm5Zq1C_b7UfM.webp 1200w, /_astro/unnamed%20(1).Cjm5Zq1C_Z2kNWOT.webp 1600w" alt="Sumando Valor — screenshot 2" sizes="(max-width: 1100px) 100vw, 1100px" loading="lazy" decoding="async" fetchpriority="auto" width="1919" height="898" class="h-auto w-full"> </div> </div> </dialog><dialog id="gallery-Sumando Valor-2" class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"> <div class="flex items-center justify-between border-b border-border px-4 py-3"> <div class="min-w-0"> <p class="truncate text-sm font-medium">Sumando Valor</p> <p class="truncate text-xs text-muted">Detalle de UI y datos.</p> </div> <button type="button" class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80" data-close>
+Cerrar
+</button> </div> <div class="p-3 sm:p-4"> <div class="overflow-hidden rounded-lg border border-border bg-card"> <img src="/_astro/unnamed%20(2).IFbmo40w_2u4Lac.webp" srcset="/_astro/unnamed%20(2).IFbmo40w_23OhRU.webp 800w, /_astro/unnamed%20(2).IFbmo40w_18bM1Y.webp 1200w, /_astro/unnamed%20(2).IFbmo40w_2ivF9u.webp 1600w" alt="Sumando Valor — screenshot 3" sizes="(max-width: 1100px) 100vw, 1100px" loading="lazy" decoding="async" fetchpriority="auto" width="1919" height="889" class="h-auto w-full"> </div> </div> </dialog> </div> <script type="module">const o=document.querySelectorAll("[data-open]");for(const t of o)t.addEventListener("click",()=>{const e=t.getAttribute("data-open");if(!e)return;const n=document.getElementById(e);n&&"showModal"in n&&n.showModal()});document.addEventListener("click",t=>{const e=t.target;e instanceof HTMLElement&&(e.matches("[data-close]")&&e.closest("dialog")?.close(),e instanceof HTMLDialogElement&&e.close())});</script> </div> </div><div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5 sm:p-6 lg:col-span-2">  <div class="flex flex-wrap items-start justify-between gap-4"> <div class="min-w-0"> <h3 class="text-lg font-semibold tracking-tight sm:text-xl">Power BI Dashboards</h3> <p class="mt-1 text-sm text-muted">KPMG (Internship)</p> <p class="mt-3 text-balance text-sm text-muted">Dashboards para reporting interno con foco en claridad, métricas y storytelling.</p> </div> <div class="flex flex-wrap items-center gap-2"> <a aria-disabled="true" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg border border-border bg-card hover:bg-card/80 pointer-events-none opacity-60 "> Private / NDA </a> </div> </div> <ul class="mt-5 grid gap-2 text-sm"> <li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Construí dashboards con navegación clara, jerarquía visual y consistencia.</span> </li><li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Modelé datasets y medidas (según necesidad) para responder preguntas de negocio.</span> </li><li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Priorización de performance: páginas, filtros y visuales sin sobrecarga.</span> </li> </ul> <div class="mt-5 flex flex-wrap gap-2"> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Power BI </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Modelado de datos </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> DAX (básico/intermedio) </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> SQL (cuando aplica) </span> </div>  </div><div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5 sm:p-6 ">  <div class="flex flex-wrap items-start justify-between gap-4"> <div class="min-w-0"> <h3 class="text-lg font-semibold tracking-tight sm:text-xl">Real State Page</h3>  <p class="mt-3 text-balance text-sm text-muted">Web app con CRUD y autenticación (demo pública).</p> </div> <div class="flex flex-wrap items-center gap-2"> <a href="https://peppy-bublanina-02817d.netlify.app/" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg bg-accent text-[hsl(var(--bg))] hover:bg-accent/90  " rel="noreferrer noopener" target="_blank"> Live </a> </div> </div> <ul class="mt-5 grid gap-2 text-sm"> <li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Implementación de flujo CRUD y autenticación.</span> </li><li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Estructura MVC y separación de responsabilidades.</span> </li> </ul> <div class="mt-5 flex flex-wrap gap-2"> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> PHP </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> MySQL </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> MVC </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> HTML </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> CSS </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> JS </span> </div> <div class="mt-6"> <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"> <button type="button" class="group text-left" aria-label="Abrir imagen 1 de Real State Page" data-open="gallery-Real State Page-0"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 overflow-hidden">  <div class="relative aspect-[16/10] overflow-hidden"> <img src="/src/img/11.png" alt="Real State — screenshot" loading="lazy" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"> </div> <div class="p-3"> <p class="line-clamp-2 text-sm text-muted">Vista principal (demo).</p> </div>  </div> </button> </div> <div> <dialog id="gallery-Real State Page-0" class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"> <div class="flex items-center justify-between border-b border-border px-4 py-3"> <div class="min-w-0"> <p class="truncate text-sm font-medium">Real State Page</p> <p class="truncate text-xs text-muted">Vista principal (demo).</p> </div> <button type="button" class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80" data-close>
+Cerrar
+</button> </div> <div class="p-3 sm:p-4"> <div class="overflow-hidden rounded-lg border border-border bg-card"> <img src="/src/img/11.png" alt="Real State — screenshot" class="h-auto w-full" loading="lazy"> </div> </div> </dialog> </div>  </div> </div><div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5 sm:p-6 ">  <div class="flex flex-wrap items-start justify-between gap-4"> <div class="min-w-0"> <h3 class="text-lg font-semibold tracking-tight sm:text-xl">Conferences Webpage</h3>  <p class="mt-3 text-balance text-sm text-muted">CRUD completo con panel admin (demo / proyecto académico).</p> </div> <div class="flex flex-wrap items-center gap-2"> <a aria-disabled="true" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg border border-border bg-card hover:bg-card/80 pointer-events-none opacity-60 "> In progress </a> </div> </div> <ul class="mt-5 grid gap-2 text-sm"> <li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">CRUD + autenticación + panel admin.</span> </li><li class="flex gap-2 text-fg/90"> <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span> <span class="text-muted">Arquitectura MVC y frontend modular.</span> </li> </ul> <div class="mt-5 flex flex-wrap gap-2"> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> PHP </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> MySQL </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> MVC </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> SASS </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Gulp </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> JS </span> </div> <div class="mt-6"> <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"> <button type="button" class="group text-left" aria-label="Abrir imagen 1 de Conferences Webpage" data-open="gallery-Conferences Webpage-0"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 overflow-hidden">  <div class="relative aspect-[16/10] overflow-hidden"> <img src="/_astro/prueba2.D7y55bOA_Z2wNg5T.webp" srcset="/_astro/prueba2.D7y55bOA_Z1Voe43.webp 400w, /_astro/prueba2.D7y55bOA_226Cwf.webp 800w, /_astro/prueba2.D7y55bOA_ZS8Cz7.webp 1200w" alt="Conferences — screenshot" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" decoding="async" fetchpriority="auto" width="1425" height="661" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"> </div> <div class="p-3"> <p class="line-clamp-2 text-sm text-muted">Vista / galería.</p> </div>  </div> </button><button type="button" class="group text-left" aria-label="Abrir imagen 2 de Conferences Webpage" data-open="gallery-Conferences Webpage-1"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 overflow-hidden">  <div class="relative aspect-[16/10] overflow-hidden"> <img src="/_astro/3.BmamE-q9_2qeTkd.webp" srcset="/_astro/3.BmamE-q9_Z1Iar4u.webp 400w, /_astro/3.BmamE-q9_Z2sVq73.webp 800w, /_astro/3.BmamE-q9_1Du87R.webp 1200w" alt="Conferences — screenshot 2" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" decoding="async" fetchpriority="auto" width="1391" height="728" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"> </div> <div class="p-3"> <p class="line-clamp-2 text-sm text-muted">UI de módulo.</p> </div>  </div> </button><button type="button" class="group text-left" aria-label="Abrir imagen 3 de Conferences Webpage" data-open="gallery-Conferences Webpage-2"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 overflow-hidden">  <div class="relative aspect-[16/10] overflow-hidden"> <img src="/_astro/4.C4Yvf_we_17lysa.webp" srcset="/_astro/4.C4Yvf_we_Z16pqY2.webp 400w, /_astro/4.C4Yvf_we_Z1Qbq1A.webp 800w, /_astro/4.C4Yvf_we_klFcL.webp 1200w" alt="Conferences — screenshot 3" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" decoding="async" fetchpriority="auto" width="1422" height="746" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"> </div> <div class="p-3"> <p class="line-clamp-2 text-sm text-muted">Detalle.</p> </div>  </div> </button> </div> <div> <dialog id="gallery-Conferences Webpage-0" class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"> <div class="flex items-center justify-between border-b border-border px-4 py-3"> <div class="min-w-0"> <p class="truncate text-sm font-medium">Conferences Webpage</p> <p class="truncate text-xs text-muted">Vista / galería.</p> </div> <button type="button" class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80" data-close>
+Cerrar
+</button> </div> <div class="p-3 sm:p-4"> <div class="overflow-hidden rounded-lg border border-border bg-card"> <img src="/_astro/prueba2.D7y55bOA_Z2wNg5T.webp" srcset="/_astro/prueba2.D7y55bOA_226Cwf.webp 800w, /_astro/prueba2.D7y55bOA_ZS8Cz7.webp 1200w, /_astro/prueba2.D7y55bOA_Z2wNg5T.webp 1425w" alt="Conferences — screenshot" sizes="(max-width: 1100px) 100vw, 1100px" loading="lazy" decoding="async" fetchpriority="auto" width="1425" height="661" class="h-auto w-full"> </div> </div> </dialog><dialog id="gallery-Conferences Webpage-1" class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"> <div class="flex items-center justify-between border-b border-border px-4 py-3"> <div class="min-w-0"> <p class="truncate text-sm font-medium">Conferences Webpage</p> <p class="truncate text-xs text-muted">UI de módulo.</p> </div> <button type="button" class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80" data-close>
+Cerrar
+</button> </div> <div class="p-3 sm:p-4"> <div class="overflow-hidden rounded-lg border border-border bg-card"> <img src="/_astro/3.BmamE-q9_2qeTkd.webp" srcset="/_astro/3.BmamE-q9_Z2sVq73.webp 800w, /_astro/3.BmamE-q9_1Du87R.webp 1200w, /_astro/3.BmamE-q9_2qeTkd.webp 1391w" alt="Conferences — screenshot 2" sizes="(max-width: 1100px) 100vw, 1100px" loading="lazy" decoding="async" fetchpriority="auto" width="1391" height="728" class="h-auto w-full"> </div> </div> </dialog><dialog id="gallery-Conferences Webpage-2" class="w-[min(1100px,calc(100%-2rem))] rounded-xl border border-border bg-bg p-0 text-fg shadow-soft backdrop:bg-black/50"> <div class="flex items-center justify-between border-b border-border px-4 py-3"> <div class="min-w-0"> <p class="truncate text-sm font-medium">Conferences Webpage</p> <p class="truncate text-xs text-muted">Detalle.</p> </div> <button type="button" class="rounded-lg border border-border bg-card px-3 py-1.5 text-sm hover:bg-card/80" data-close>
+Cerrar
+</button> </div> <div class="p-3 sm:p-4"> <div class="overflow-hidden rounded-lg border border-border bg-card"> <img src="/_astro/4.C4Yvf_we_17lysa.webp" srcset="/_astro/4.C4Yvf_we_Z1Qbq1A.webp 800w, /_astro/4.C4Yvf_we_klFcL.webp 1200w, /_astro/4.C4Yvf_we_17lysa.webp 1422w" alt="Conferences — screenshot 3" sizes="(max-width: 1100px) 100vw, 1100px" loading="lazy" decoding="async" fetchpriority="auto" width="1422" height="746" class="h-auto w-full"> </div> </div> </dialog> </div>  </div> </div> </div>  </section> <section id="skills" class="py-16 sm:py-20 ">  <header class="mb-10"> <p class="font-mono text-xs uppercase tracking-wider text-muted">Skills</p> <h2 class="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl"> Lo que uso hoy </h2> <p class="mt-3 max-w-2xl text-muted">Honesto, data-first y sin inflar.</p> </header>   <div class="grid gap-4 md:grid-cols-2"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <h3 class="text-base font-semibold tracking-tight">Data</h3> <div class="mt-4 flex flex-wrap gap-2"> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Python </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> SQL </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Power BI </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Estadística (bases) </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Modelado de datos (bases) </span> </div>  </div> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <h3 class="text-base font-semibold tracking-tight">Engineering</h3> <div class="mt-4 flex flex-wrap gap-2"> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Git/GitHub </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> APIs </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Web fundamentals </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Calidad de código </span><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Documentación </span> </div>  </div> </div>  </section> <section id="about" class="py-16 sm:py-20 ">  <header class="mb-10"> <p class="font-mono text-xs uppercase tracking-wider text-muted">Sobre mí</p> <h2 class="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl"> Resumen </h2>  </header>   <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-6">  <div class="grid gap-3"> <p class="text-muted">Estudiante de Ingeniería Informática (UCAB) en último año, Top 10.</p><p class="text-muted">Estoy pivotando hacia Data Science / Analytics con base fuerte en ingeniería y fundamentos cuantitativos.</p><p class="text-muted">Me enfoco en construir cosas útiles: productos internos, dashboards y sistemas mantenibles.</p> </div>  </div>  </section> <section id="certs" class="py-16 sm:py-20 ">  <header class="mb-10"> <p class="font-mono text-xs uppercase tracking-wider text-muted">Certificaciones</p> <h2 class="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl"> Certificaciones (curado) </h2>  </header>   <div class="mb-4 flex flex-wrap items-center justify-between gap-3"> <p class="text-sm text-muted">Lista corta. Evidencia completa en carpeta.</p> <a href="https://drive.google.com/drive/folders/1n6rTpEmHFRkcnp_uWT_kKkW8eU_CaHZu?usp=sharing" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg border border-border bg-card hover:bg-card/80  " rel="noreferrer noopener" target="_blank"> Ver certificados </a> </div> <div class="grid gap-4 md:grid-cols-2"> <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <div class="flex items-center justify-between gap-3"> <p class="font-medium">Meta Database Engineering</p> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> En progreso </span> </div>  </div><div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <div class="flex items-center justify-between gap-3"> <p class="font-medium">Git &amp; GitHub Certification</p> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Completado </span> </div>  </div><div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-5">  <div class="flex items-center justify-between gap-3"> <p class="font-medium">Web Development Bootcamp</p> <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none border-border/70 bg-card/40 text-muted "> Completado </span> </div>  </div> </div>  </section> <section id="contact" class="py-16 sm:py-20 ">  <header class="mb-10"> <p class="font-mono text-xs uppercase tracking-wider text-muted">CTA</p> <h2 class="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl"> ¿Hablamos? </h2> <p class="mt-3 max-w-2xl text-muted">Si tienes un rol de Data / Analytics junior o prácticas, me interesa conversar.</p> </header>   <div class="rounded-xl border border-border bg-card/70 shadow-card backdrop-blur supports-[backdrop-filter]:bg-card/55 p-6">  <div class="flex flex-wrap items-center justify-between gap-4"> <div> <p class="font-semibold">Caracas, Venezuela</p> <p class="mt-1 text-sm text-muted">Respondo más rápido por LinkedIn.</p> </div> <div class="flex flex-wrap gap-3"> <a aria-disabled="true" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg border border-border bg-card hover:bg-card/80 pointer-events-none opacity-60 "> 
+Email
+ </a> <a href="https://www.linkedin.com/in/luisguslg/" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-bg bg-accent text-[hsl(var(--bg))] hover:bg-accent/90  " rel="noreferrer noopener" target="_blank"> LinkedIn </a> </div> </div> <p class="mt-4 text-xs text-muted">
+Nota: agrega tu email en <span class="font-mono">src/content/site.ts</span>.
+</p> </div>  </section> <footer class="border-t border-border py-10"> <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"> <p class="text-sm text-muted"> 2026 · Luis Gustavo Perdomo Márquez · Caracas, Venezuela </p> <div class="flex flex-wrap gap-4 text-sm"> <a class="text-muted hover:text-fg transition-colors" href="#projects">Proyectos</a><a class="text-muted hover:text-fg transition-colors" href="#skills">Skills</a><a class="text-muted hover:text-fg transition-colors" href="#about">Sobre mí</a><a class="text-muted hover:text-fg transition-colors" href="#certs">Certificaciones</a><a class="text-muted hover:text-fg transition-colors" href="#contact">Contacto</a> </div> </div> </footer>  </div> </main>  </body></html>

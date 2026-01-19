@@ -1,0 +1,57 @@
+---
+import Card from "./Card.astro";
+import Badge from "./Badge.astro";
+import CTAButton from "./CTAButton.astro";
+import Gallery from "./Gallery.astro";
+import type { Project } from "../content/site";
+
+type Props = { project: Project };
+const { project } = Astro.props;
+
+const isFeatured = Boolean(project.featured);
+---
+
+<Card class={`p-5 sm:p-6 ${isFeatured ? "lg:col-span-2" : ""}`}>
+  <div class="flex flex-wrap items-start justify-between gap-4">
+    <div class="min-w-0">
+      <h3 class="text-lg font-semibold tracking-tight sm:text-xl">{project.title}</h3>
+      {project.context && <p class="mt-1 text-sm text-muted">{project.context}</p>}
+      <p class="mt-3 text-balance text-sm text-muted">{project.subtitle}</p>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-2">
+      {project.links.map((l) => (
+        <CTAButton
+          variant={l.label === "Live" ? "primary" : "secondary"}
+          href={"href" in l ? l.href : "#"}
+          disabled={!("href" in l) || !l.href}
+          external={"href" in l && !!l.href && l.href.startsWith("http")}
+        >
+          {l.label}
+        </CTAButton>
+      ))}
+    </div>
+  </div>
+
+  <ul class="mt-5 grid gap-2 text-sm">
+    {project.bullets.slice(0, 4).map((b) => (
+      <li class="flex gap-2 text-fg/90">
+        <span class="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+        <span class="text-muted">{b}</span>
+      </li>
+    ))}
+  </ul>
+
+  <div class="mt-5 flex flex-wrap gap-2">
+    {project.stack.map((s) => (
+      <Badge variant="muted">{s}</Badge>
+    ))}
+  </div>
+
+  {project.images?.length ? (
+    <div class="mt-6">
+      <Gallery images={project.images} projectTitle={project.title} />
+    </div>
+  ) : null}
+</Card>
+
