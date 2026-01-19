@@ -61,9 +61,10 @@ const personLd = {
       })();
     </script>
 
-    <script type="application/ld+json" is:inline>
-      {JSON.stringify(personLd)}
-    </script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personLd)}
+    />
   </head>
   <body>
     <a

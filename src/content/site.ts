@@ -131,7 +131,6 @@ export const site = {
       ],
       stack: ["PHP", "MySQL", "MVC", "HTML", "CSS", "JS"],
       links: [{ label: "Live", href: "https://peppy-bublanina-02817d.netlify.app/" }],
-      images: [{ src: "/src/img/11.png", alt: "Real State — screenshot", caption: "Vista principal (demo)." }],
     },
     {
       id: "conferences",
